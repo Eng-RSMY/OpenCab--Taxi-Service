@@ -1,0 +1,201 @@
+<html>
+<head>
+<title>Our Services - Open Cab</title>
+<style>
+body{
+font-family:century gothic;
+}
+ul {
+    list-style-type: none;
+    margin: 0%;
+    padding:0;
+    width: 100%;
+	height:20%;
+    background-color: palegreen;
+}
+
+li a {
+    display: block;
+    color: #000;
+    padding: 8px 0 8px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color on hover */
+li a:hover {
+    background-color: #009061;
+    color: white;
+}
+
+.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+
+
+
+body
+{
+	background-color:#009061;
+}
+
+#header
+{
+	position:absolute;
+	top:1%;
+	left:20%;
+	height:10%;
+	width:79%;
+	background-color:#FF7;
+	border-radius:15px;
+}
+
+#main
+{
+	position:absolute;
+	top:13%;
+	left:20%;
+	height:80%;
+	width:79%;
+	background-color:#FF7;
+	border-radius:15px;
+}
+
+#images
+{
+	position:absolute;
+	top:6%;
+	left:14%;
+	height:82%;
+	width:74%;
+	background-color:pink;
+}
+
+#subtitle
+{
+	position:absolute;
+	top:89%;
+	left:14%;
+	height:10%;
+	width:74%;
+	background-color:lightgrey;
+}
+
+#lbutton
+{
+	position:absolute;
+	top:42%;
+	left:3%;
+	height:11%;
+	width:8%;
+	background-color:none;
+}
+
+#rbutton
+{
+	position:absolute;
+	top:42%;
+	left:88%;
+	height:11%;
+	width:8%;
+	background-color:none;
+}
+
+#footer
+{
+	position:absolute;
+	top:95%;
+	left:20%;
+	height:4%;
+	width:79%;
+	background-color:#FF7;
+	border-radius:5px;
+}
+
+#list
+{
+	position:absolute;
+	left:1%;
+	top:20%;
+	height:70%;
+	width:18%;
+	background-color:palegreen;
+	border-radius:10px;
+}
+#list li
+{
+display:inline;
+padding:20px;
+}
+
+
+
+</style>
+</head>
+<script>
+var i;
+var a=new Array(5);
+a[1]="Fast and Reliable";
+a[2]="Instant Service for You";
+a[3]="Available in Your Locality";
+a[4]="All Over the City";
+function next()
+{
+	if(i<4)
+	{
+		i++;
+	}
+	else
+	{
+		i=1;
+	}
+	document.getElementById("m").src="a"+i+".jpg";
+	document.getElementById("t").innerHTML=a[i];
+}
+
+function previous()
+{
+	if(i>1)
+	{
+		i--;
+	}
+	else
+	{
+		i=4;
+	}
+	document.getElementById("m").src="a"+i+".jpg";
+	document.getElementById("t").innerHTML=a[i];
+}
+
+</script>
+<body>
+<a href="index.html"><img src="icon.png" height="100px" width="250px"></a>
+
+<div id="list">
+<ul>
+	<li><a href="index.html">Home</a></li>
+	<li><a href="service.html">Our Service Gallery</a></li>
+	<li><a href="signup.php">Register</a></li>
+	<li><a href="account.html">Order your Cab</a></li>
+	<li><a href="contact.php">Contact Us</a></li>
+	<li><a href="about.html">About Us</a></li>
+	<li><a href="tnc.html">Terms & Conditions</a></li>
+	<li><a href="help.html">Help n Support</a></li>
+</ul>
+</div>
+
+<div id="header">
+<font color="green" size="7">Our Service Gallery</font>
+</div>
+<div id="main">
+<div id="subtitle"><font color="green" face="century gothic" size="7"><span id="t" ></span></font><br><br><br></div>
+<div id="lbutton"><button onclick="previous();" style="border-radius:60px;"><img src="prev.ico" height="100" width="100"></button></div>
+<div id="rbutton"><button onclick="next();" style="border-radius:60px;"><img src="next.ico"  height="100" width="100"></button></div>
+<div id="images">
+<img src="a1.jpg" height="100%" width="100%" id="m"><br><br>
+</div>
+</div>
+<div id="footer"></div>
+</body>
+</html>

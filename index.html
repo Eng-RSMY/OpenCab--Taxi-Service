@@ -1,0 +1,226 @@
+<html>
+<head>
+<title>Open Cab-The best taxi service in your city</title>
+<script>
+var i=1,j=5;
+function slide1()
+{
+    if(i<4)
+	{
+	   i++;
+	}
+	else
+	{
+	   i=1;
+	}
+	
+	document.getElementById("m1").src="p"+i+".jpg";
+	setTimeout("slide1()",4000);
+	
+ 
+}
+
+
+function slide2()
+{
+    if(j<8)
+	{
+	   j++;
+	}
+	else
+	{
+	   j=5;
+	}
+	
+	document.getElementById("m2").src="p"+j+".jpg";
+	setTimeout("slide2()",4000);
+	
+ 
+}
+</script>
+
+</head>
+<style>
+
+body 
+{
+	background-color:#FF7;
+font-family:century gothic;
+}
+}
+ul {
+    list-style-type: none;
+    margin: 0%;
+    padding:0;
+    width: 100%;
+	height:20%;
+    background-color: palegreen;
+}
+
+li a {
+    display: block;
+    color: #000;
+    padding: 8px 0 8px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color on hover */
+li a:hover {
+    background-color: green;
+    color: white;
+}
+
+.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+
+#top
+{
+	position:absolute;
+	left:21%;
+	top:5%;
+	height:8%;
+	width:78%;
+	background-color:#009061;
+	border-radius:5px;
+	transition:all 0.2s;
+
+}
+
+#top:hover
+{
+  height:9%;
+  width:78%;
+}
+
+
+#list
+{
+	position:absolute;
+	left:1%;
+	top:20%;
+	height:75%;
+	width:18%;
+	background-color:palegreen;
+	border-radius:10px;
+}
+
+
+#marquee
+{
+	position:absolute;
+	left:21%;
+	top:60%;
+	height:25%;
+	width:78%;
+	background-color:grey;
+	border-radius:5px;
+}
+
+#list li
+{
+display:inline;
+padding:20px;
+}
+
+#d1
+{
+   position:absolute;
+   top:20%;
+   left:21%;
+   height:35%;
+   width:78%;
+   animation-name:an1;
+   animation-duration:4s;
+   animation-iteration-count:infinite;
+   background-color:#009061;
+}
+
+#d2
+{
+   position:absolute;
+   top:20%;
+   left:21%;
+   height:35%;
+   width:78%;
+   animation-name:an2;
+   animation-duration:4s;
+   animation-iteration-count:infinite;
+   background-color:#009061;
+}
+
+@keyframes an1
+{
+    0%{width:0%;left:78%;}
+    25%{width:78%;left:21%;}
+    75%{width:78%;left:21%;}
+    100%{width:0%;left:78%;}
+	
+}
+
+@keyframes an2
+{
+    0%{width:78%;right:2%;}
+    25%{width:0%;right:78%;}
+    75%{width:0%;right:78%;}
+    100%{width:78%;right:2%;}
+	
+}
+
+#i
+{
+   height:60px;
+   width:150px;
+   margin:1%;
+   transform:rotate(0deg);
+   transition:all 1s;
+}
+#i:hover
+{
+    transform:rotate(360deg);
+	height:100px;
+	width:250px;
+}
+
+#address
+{
+	position:absolute;
+	left:21%;
+	top:90%;
+	height:3%;
+	width:78%;
+	background-color:orange;
+	border-radius:5px;
+}
+
+
+
+</style>
+<body onload="slide1(),slide2()">
+
+<a href="index.html"><img src="icon.png" id="i"></a>
+<div id="list">
+<ul>
+	<li><a href="index.html">Home</a></li>
+	<li><a href="service.html">Our Service Gallery</a></li>
+	<li><a href="signup.php">Register</a></li>
+	<li><a href="account.html">Order your Cab</a></li>
+	<li><a href="contact.php">Contact Us</a></li>
+	<li><a href="about.html">About Us</a></li>
+	<li><a href="help.html">Help n Support</a></li>
+</ul>
+</div>
+<div id="top">
+<font color="white" size="7">Open Cab - The World Class Taxi Service</font>
+</div>
+<div id="d1"><img src="p1.jpg" height="100%" width="100%" id="m1"></div>
+<div id="d2"><img src="p5.jpg" height="100%" width="100%" id="m2"></div>
+<div id="marquee">
+<marquee scrollamount="30"><img src="move.png" height="100" width="250"><img src="taxis.png" height="100" width="250"></marquee>
+<marquee scrollamount="25" direction="right"><img src="move2.png"  height="100" width="140"></marquee>
+</div>
+<div id="address"><address>Created and maintained by Kamesh Kumar Singh<br>Copyright<sup>© </sup>| Open Cab | 14th July 2016</div>
+</body>
+</html>
